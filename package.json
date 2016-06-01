@@ -1,0 +1,23 @@
+{
+  "name": "ci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/half-shell/sample-ci.git"
+  },
+  "author": "half-shell",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/half-shell/sample-ci/issues"
+  },
+  "homepage": "https://github.com/half-shell/sample-ci#readme"
+}
