@@ -4,7 +4,7 @@ var router = require('express').Router();
 module.exports = function(api){
 
     router.get('/', function(req, res, next){
-        res.send([]);
+        res.send(api.models.contacts);
     });
 
     router.get('/:name', function(req, res, next){
