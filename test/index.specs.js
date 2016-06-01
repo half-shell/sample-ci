@@ -1,41 +1,41 @@
 var request = require('supertest');
 var api = require('../index');
 
-describe('contacts', function(){
-    describe('GET /contacts', function(){
-        it('should return the list of contacts', function(){
+describe('api/contacts', function(){
+    describe('GET /api/contacts', function(){
+        it('should return the list of api/contacts', function(){
             return request(api)
-                .get('/contacts')
+                .get('/api/contacts')
                 .send()
                 .expect(200)
         });
     });
-    describe('POST /contacts/:name', function(){
+    describe('POST /api/contacts/:name', function(){
         it('should return a new contact', function(){
             return request(api)
-                .post('/contacts/foo')
+                .post('/api/contacts/foo')
                 .send()
                 .expect(200)
         });
         it('should no be authorized to create a new contact with an already registered name', function(){
             return request(api)
-                .post('/contacts/exists')
+                .post('/api/contacts/exists')
                 .send()
                 .expect(403)
         });
     });
-    describe('PUT /contacts/:name/:new', function(){
+    describe('PUT /api/contacts/:name/:new', function(){
         it('should update contact with the same name', function(){
             return request(api)
-            .put('/contacts/foo/bar')
+            .put('/api/contacts/foo/bar')
             .send()
             .expect(200)
         });
     });
-    describe('DELETE /contacts/:name', function(){
-        it('should remove contacts with the same name', function(){
+    describe('DELETE /api/contacts/:name', function(){
+        it('should remove api/contacts with the same name', function(){
             return request(api)
-                .delete('/contacts/foo')
+                .delete('/api/contacts/foo')
                 .send()
                 .expect(200)
         });
