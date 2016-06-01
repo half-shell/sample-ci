@@ -21,7 +21,7 @@ describe('contacts', function(){
             return request(api)
                 .post('/contacts/exists')
                 .send()
-                .expect(401)
+                .expect(403)
         });
     });
     describe('PUT /contacts/:name/:new', function(){
